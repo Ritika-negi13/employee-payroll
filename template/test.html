@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+    <script>
+    //     $(document).ready(function(){
+    //     $("#getvalue").on("click", function(){
+    //         var count=$('#inputvalue').val();
+    //         var countdowntimer=setInterval(function(){
+    //             $('#countdown').text(count)
+    //                 count--;
+    //             if(count<0) {
+    //                 $('#countdown').text('stop');
+    //             }
+    //         },1000);
+    //     })
+    // })
+
+    $(document).ready(
+        function(){
+        $("#getvalue").on("click",
+        function(){
+            $("#getvalue").css("background-color",$("#inputvalue").val());
+        })
+    })
+    </script>
+</head>
+<body>
+    <input type="text" id="inputvalue">
+    <button id="getvalue"> submit</button>
+
+    <div id="countdown" style="color:black;padding: 20px;border-color: black;"></div>
+
+</body>
+
+
+</html>

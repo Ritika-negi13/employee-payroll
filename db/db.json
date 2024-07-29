@@ -1,20 +1,5 @@
 {
     "employee":[
-        {
-        "name":"Ritika ",
-        "age":22
-        },
-        {
-            "name":"Ritika ",
-            "age":22
-        },
-        {
-            "name":"Ritika ",
-            "age":22
-        },
-        {
-                "name":"Ritika ",
-                "age":22
-        }
+        
     ]
 }

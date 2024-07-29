@@ -1,0 +1,79 @@
+.roboto-regular { 
+    font-family: "Roboto", sans-serif;   
+    font-weight: 400;   
+    font-style: normal; 
+}
+body{
+    font-family:"Roboto", sans-serif;
+    font-size: small;
+    font-weight: 400;
+    color:#42515f;
+}
+header{
+    background-color:white;
+}
+#header-logo{
+    display:flex;
+    margin-left: 100px;
+}
+#header-img{
+    padding: 10px 0px 10px 70px;
+}
+main{
+    background-color: rgb(250, 246, 246);  
+}
+.employee-logo{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1px;
+    font-size: 18px;
+}
+.container{
+    background-color:  #faf6f6;
+    padding:20px;
+}
+.form-box{
+    background-color: white;
+    margin: 10px 300px 20px 300px;
+    padding:5px 70px 30px 40px;
+    border:20px;
+    border-color: rgb(250, 246, 246);
+    /* display:flex; */
+}
+form{
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    color:#42515f;
+}
+.profile img{
+    width:30px;
+}
+.profile label{
+    width:60px;
+}
+.buttons{
+    display:flex;
+    justify-content: space-between;
+    color:#42515f;
+}
+input[type="text"]{
+    width:300px;
+    color:#42515f;
+}
+input [type=""]{
+    width:150px;
+    color:#42515f;
+}
+label{
+    text-align: left;
+    display: inline-block;
+    width: 90px;
+}
+button{
+    color:#42515f;
+}
+textarea{
+    width:300px;
+}
