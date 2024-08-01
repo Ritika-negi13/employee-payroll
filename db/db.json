@@ -1,5 +1,74 @@
 {
-    "employee":[
-        
-    ]
+  "Employee": [
+    {
+      "id": "3794",
+      "name": "Umesh",
+      "img": "../assets/Ellipse -3.png",
+      "gender": "Male",
+      "department": [
+        "HR",
+        "Finance",
+        "Sales"
+      ],
+      "salary": "20000",
+      "notes": "",
+      "startDate": "15 June 2024"
+    },
+    {
+      "name": "Priyesh",
+      "img": "../assets/Ellipse -2.png",
+      "gender": "Male",
+      "salary": "20000",
+      "notes": "",
+      "startDate": "17 Sept 2022",
+      "department": [
+        "HR",
+        "Finance",
+        "Sales"
+      ],
+      "id": "bf79"
+    },
+    {
+      "id": "d462",
+      "name": "Priyesh",
+      "img": "../assets/Ellipse -2.png",
+      "gender": "Male",
+      "department": [
+        "HR",
+        "Finance",
+        "Sales"
+      ],
+      "salary": "40000",
+      "notes": "dbkidhdbksoisd sjk ",
+      "startDate": "16 Sept 2023"
+    },
+    {
+      "name": "Ritika Negi",
+      "img": "../assets/Ellipse -1.png",
+      "gender": "Female",
+      "salary": "40000",
+      "notes": "",
+      "startDate": "17 June 2024",
+      "department": [
+        "HR",
+        "Sales",
+        "Others"
+      ],
+      "id": "1348"
+    },
+    {
+      "id": "b056",
+      "name": "Anurag",
+      "img": "../assets/Ellipse -2.png",
+      "gender": "Female",
+      "department": [
+        "HR",
+        "Finance",
+        "Sales"
+      ],
+      "salary": "40000",
+      "notes": "",
+      "startDate": "16 July 2023"
+    }
+  ]
 }
