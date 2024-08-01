@@ -1,43 +1,97 @@
-// function onSubmit()
-// {
-//     let name=document.getElementById("textname").value;
-//     console.log("submit  : ");
-//     alert(name);
-// }
-$(document).ready(()=>{
-    $("#btnClick").click(function(e){
-        //alert("Hi, all good??");
-        getEmplyeeList();
-    })
-})
-function getEmplyeeList(){
-        $.ajax({
-            type:"GET",
-            url:"http://localhost:3000/employee",
-            success:function(res){
-                console.log(res);
-            },
-            error:function(err){
-                console.log(err)
+$(function (e) {
+    getEmployeeDetails();
+});
+
+function getEmployeeDetails() {
+    $.ajax({
+        type: "GET",
+        url: "http://localhost:3000/Employee",
+        success: function (res) {
+            
+            for (var i = 0; i < res.length; i++) {
+                
+                let data = `
+                <tr id=${res[i].id}>
+                    <td>
+                        <img src="${res[i].img}">
+                    </td>
+                    <td>${res[i].name}</td>
+                    <td>${res[i].gender}</td>
+                    <td>
+                        ${res[i].department.map(element => `<span class="span">${element}</span>`).join(' ')}
+                    </td>   
+                    <td>₹ ${res[i].salary}</td>
+                    <td>${res[i].startDate}</td>
+                    <td class="icon"> 
+                        <span>
+                            <i class="material-icons" onclick="openPopup(this)">&#xe872;</i>
+                        </span>
+                        <span>
+                            <i class="material-icons" onclick="editData(this)">&#xe3c9;</i>
+                        </span>
+                    </td>
+                </tr>
+                `;
+                $("#tbl-details").append(data);
             }
-        })
+        },
+        error: function (err) {
+ 
+        }
+    })
 }
 
-function openPopup() {
+function deleteData(id){
+        $.ajax(
+            {
+                url:"http://localhost:3000/Employee/"+id,
+                type:"DELETE",
+                success:() =>{
+                    console.log('something')
+                },
+                error:(e)=>{console.log(e)}
+            }
+        )
+}
+
+
+// function getEmplyeeList(){
+//         $.ajax({
+//             type:"GET",
+//             url:"http://localhost:3000/Employee",
+//             success:function(res){
+//                 console.log(res);
+//             },
+//             error:function(err){
+//                 console.log(err)
+//             }
+//         })
+// }
+
+function openPopup(e) {
     document.getElementById("myForm").style.display = "block";
     document.getElementsByClassName("backdrop")[0].style.display = "block";
+    x=e.closest('tr');
+    const id=x.id
+    $('#deletedata').click(()=> deleteData(id));
 }
   
 function closePopup() {
     document.getElementById("myForm").style.display = "none";
     document.getElementsByClassName("backdrop")[0].style.display = "none";
 }
-function deleteData(){
-    document.getElementById("ondelete").style.display = "";
-    console.log("delete")
-}
 function openSearchbar(){
-    document.getElementById("myInput").style.display =""; 
+    if(document.getElementById("myInput").style.display =="")
+        document.getElementById("myInput").style.display ="none"
+    else
+        document.getElementById("myInput").style.display ="";  
+}
+
+function editData(e){   
+    x=e.closest('tr');
+    const eid=x.id;
+    localStorage.setItem('eid',eid);
+    window.location.replace('../template/form.html');
 }
 
 function onSearch() {
